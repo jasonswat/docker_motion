@@ -1,0 +1,4 @@
+config/config.sh
+.vagrant
+*.swp
+Vagrantfile

@@ -3,7 +3,7 @@
 ### To Build
 
 ```
-git clone https://github.com/jason.swat/docker_motion
+git clone git@github.com:jasonswat/docker_motion.git 
 cd docker_motion
 docker build -t docker_motion .
 

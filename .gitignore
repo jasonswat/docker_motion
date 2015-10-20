@@ -1,4 +1,4 @@
-config/config.sh
+config/motion.conf
 .vagrant
 *.swp
 Vagrantfile

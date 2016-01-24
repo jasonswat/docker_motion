@@ -1,8 +1,7 @@
 #!/bin/bash
 imagedir="/motion-images"
-#imagedir="."
 drophome="/home/core/Dropbox-Uploader"
-minsize="1000"
+minsize="830"
 for file in $(ls ${imagedir})
 do
   if [ -f "${imagedir}/${file}" ];then

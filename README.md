@@ -14,3 +14,34 @@ docker build -t docker_motion .
 ```
 ./startup,sh
 ```
+### Use the motion_dropbox.sh script to upload to dropbox
+
+The Dropbox-Uploader script from Andrea Fabrizi is also needed. 
+The Dropbox-Uploader is what actually uploads to dropbox.
+
+see https://github.com/andreafabrizi/Dropbox-Uploader
+
+I use a systemd time to call motion_dropbox.sh every 10 minutes to upload files
+
+Here is the service config for the timer:
+
+```
+cat /etc/systemd/system/motion_upload.service
+[Unit]
+Description=Uploads motion files to dropbox
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sh -c '/usr/bin/su - core -c /home/core/docker_motion/motion_dropbox.sh' 
+```
+Here is the timer config:
+
+```
+cat /etc/systemd/system/motion_upload.timer
+[Unit]
+Description=Run motion_upload.service every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+```
+

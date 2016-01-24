@@ -45,3 +45,13 @@ Description=Run motion_upload.service every 10 minutes
 OnCalendar=*:0/10
 ```
 
+To start the timers
+
+```
+systemctl start motion_upload.timer 
+```
+
+To enable at boot
+```
+systemctl enable motion_upload.timer 
+```

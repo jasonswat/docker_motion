@@ -48,10 +48,10 @@ OnCalendar=*:0/10
 To start the timers
 
 ```
-systemctl start motion_upload.timer 
+sudo systemctl start motion_upload.timer 
 ```
 
 To enable at boot
 ```
-systemctl enable motion_upload.timer 
+sudo systemctl enable motion_upload.timer 
 ```
